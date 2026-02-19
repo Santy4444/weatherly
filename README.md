@@ -1,6 +1,6 @@
 # Weatherly
 
-Aplicação web para consultar o tempo em tempo real, com suporte a modo claro e escuro.
+Aplicação web para consultar o tempo em tempo real.
 
 ![Java](https://img.shields.io/badge/Java-17+-ED8B00?logo=openjdk)
 ![Maven](https://img.shields.io/badge/Maven-3.x-C71A36?logo=apachemaven)
@@ -11,16 +11,7 @@ Aplicação web para consultar o tempo em tempo real, com suporte a modo claro e
 - Consulta o tempo atual por cidade (Lisboa, Porto, Londres, etc.)
 - Temperatura, sensação térmica, humidade, pressão, vento e nuvens
 - Modo claro e escuro com animação de transição
-- Interface responsiva e minimalista
-- Dados em português (OpenWeatherMap API com `lang=pt`)
-
-## Tecnologias
-
-| Frontend | Backend |
-|----------|---------|
-| HTML5, CSS3, JavaScript | Java 17 |
-| Variáveis CSS para temas | Servidor HTTP built-in |
-| OpenWeatherMap Icons | Maven |
+- Dados por (OpenWeatherMap API)
 
 ## Pré-requisitos
 
@@ -60,26 +51,11 @@ mvn compile exec:java
 
 Abra [http://localhost:8080](http://localhost:8080) no browser.
 
-## Estrutura do projeto
-
-```
-weatherly/
-├── pom.xml
-├── README.md
-└── src/main/
-    ├── java/pt/weather/
-    │   └── WeatherServer.java    # Servidor HTTP + proxy para OpenWeatherMap
-    └── resources/static/
-        ├── index.html
-        ├── styles.css
-        └── app.js
-```
-
 ## API utilizada
 
 - [Current Weather Data](https://openweathermap.org/current) da OpenWeatherMap
 - Endpoint: `/api/weather?city=NomeDaCidade`
-- Dados em Celsius e português
+- Dados em Celsius
 
 ## Licença
 
