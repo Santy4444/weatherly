@@ -15,12 +15,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-<<<<<<< HEAD
 import java.time.Duration;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-=======
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 
 public class WeatherServer {
 
@@ -39,20 +36,12 @@ public class WeatherServer {
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 0);
 
         server.createContext("/", new StaticFileHandler());
-<<<<<<< HEAD
         server.createContext("/api/weather/icon", new WeatherIconHandler());
-=======
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
         server.createContext("/api/weather", new WeatherApiHandler());
 
         server.setExecutor(null);
         server.start();
-<<<<<<< HEAD
         System.out.println("O server esta a correr em http://localhost:" + PORT);
-=======
-        System.out.println("Servidor a correr em http://localhost:" + PORT);
-        System.out.println("Abra o browser em http://localhost:" + PORT);
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
     }
 
     static class StaticFileHandler implements HttpHandler {
@@ -155,7 +144,6 @@ public class WeatherServer {
         }
     }
 
-<<<<<<< HEAD
     static class WeatherIconHandler implements HttpHandler {
         private static final String ICON_BASE = "https://openweathermap.org/img/wn/";
         private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
@@ -225,8 +213,6 @@ public class WeatherServer {
         }
     }
 
-=======
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
     private static void sendResponse(HttpExchange exchange, int code, String contentType, String body) throws IOException {
         byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
         exchange.getResponseHeaders().set("Content-Type", contentType);

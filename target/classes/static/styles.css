@@ -1,4 +1,3 @@
-/* Reset e base */
 *, *::before, *::after { box-sizing: border-box; }
 html { font-size: 16px; scroll-behavior: smooth; }
 
@@ -29,37 +28,6 @@ html { font-size: 16px; scroll-behavior: smooth; }
     --error-bg: rgba(220, 80, 70, 0.12);
     --error-border: rgba(200, 60, 50, 0.35);
     --error-text: #a03028;
-    --icon-bg: rgba(200, 220, 238, 0.9);
-}
-
-body.dark {
-    --bg-gradient-1: #0f1419;
-    --bg-gradient-2: #151d28;
-    --bg-gradient-3: #1a2533;
-    --bg-gradient-4: #1f2d3d;
-    --overlay-1: rgba(30, 60, 90, 0.3);
-    --overlay-2: rgba(20, 45, 70, 0.25);
-    --overlay-3: rgba(25, 50, 80, 0.2);
-    --text-primary: #e8edf2;
-    --text-secondary: #a8b8c8;
-    --text-muted: #7a8fa0;
-    --text-muted-2: #6b7d8e;
-    --accent: #7eb8e0;
-    --accent-light: #5a9bc8;
-    --card-bg: rgba(30, 45, 60, 0.85);
-    --card-border: rgba(50, 70, 95, 0.6);
-    --form-bg: rgba(30, 45, 60, 0.8);
-    --form-border: rgba(50, 70, 95, 0.5);
-    --shadow: rgba(0, 0, 0, 0.25);
-    --shadow-lg: rgba(0, 0, 0, 0.35);
-    --border-subtle: rgba(126, 184, 224, 0.15);
-    --btn-gradient: linear-gradient(135deg, #4a7fa8, #3d6b8e);
-    --spinner-border: rgba(126, 184, 224, 0.25);
-    --spinner-color: #7eb8e0;
-    --error-bg: rgba(220, 80, 70, 0.2);
-    --error-border: rgba(200, 60, 50, 0.5);
-    --error-text: #e8a0a0;
-    --icon-bg: rgba(255, 255, 255, 0.18);
 }
 
 body {
@@ -75,58 +43,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Dark mode toggle */
-.theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 10;
-    width: 2.75rem;
-    height: 2.75rem;
-    border: none;
-    border-radius: 50%;
-    background: var(--card-bg);
-    color: var(--accent);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 12px var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.theme-toggle:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px var(--shadow-lg);
-}
-.theme-icon {
-    position: absolute;
-    font-size: 1.25rem;
-}
-.theme-icon.moon { display: none; }
-body.dark .theme-icon.sun { display: none; }
-body.dark .theme-icon.moon { display: block; }
-
-/* Animação ao trocar de tema */
-.theme-transition-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-}
-.theme-transition-overlay.fade-in {
-    opacity: 1;
-}
-.theme-transition-overlay.fade-out {
-    opacity: 0;
-}
-
-/* Transições suaves nos elementos ao mudar de tema */
 body,
 .background,
 .background::after,
-.theme-toggle,
 .header h1,
 .search-form,
 .search-input,
@@ -174,7 +93,6 @@ body,
     align-items: stretch;
 }
 
-/* Header */
 .header {
     text-align: center;
     margin-bottom: 2rem;
@@ -187,7 +105,6 @@ body,
     letter-spacing: -0.02em;
 }
 
-/* Pesquisa */
 .search-section {
     margin-bottom: 1.5rem;
 }
@@ -244,7 +161,6 @@ body,
     color: var(--text-muted);
 }
 
-/* Loading */
 .loading {
     display: flex;
     align-items: center;
@@ -267,7 +183,6 @@ body,
     to { transform: rotate(360deg); }
 }
 
-/* Erro */
 .error-card {
     background: var(--error-bg);
     border: 1px solid var(--error-border);
@@ -282,7 +197,6 @@ body,
 .error-icon { font-size: 1.5rem; line-height: 1; }
 .error-card p { margin: 0; font-size: 0.95rem; }
 
-/* Cartão do tempo */
 .weather-card {
     background: var(--card-bg);
     border-radius: 1.5rem;
@@ -316,18 +230,15 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--icon-bg);
+    background: #0d3b4c;
     border-radius: 50%;
     flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(13, 59, 76, 0.1);
 }
 .weather-icon {
     width: 56px;
     height: 56px;
     object-fit: contain;
-}
-/* Light mode: ícone na cor do texto Weatherly (#0d3b4c) */
-body:not(.dark) .weather-icon {
-    filter: brightness(0) saturate(100%) invert(15%) sepia(45%) saturate(2500%) hue-rotate(168deg) brightness(92%) contrast(88%);
 }
 
 .weather-main {
@@ -381,7 +292,6 @@ body:not(.dark) .weather-icon {
     color: var(--accent);
 }
 
-/* Footer */
 .footer {
     margin-top: 2rem;
     text-align: center;
