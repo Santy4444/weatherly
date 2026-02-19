@@ -1,3 +1,4 @@
+/* Reset e base */
 *, *::before, *::after { box-sizing: border-box; }
 html { font-size: 16px; scroll-behavior: smooth; }
 
@@ -28,8 +29,6 @@ html { font-size: 16px; scroll-behavior: smooth; }
     --error-bg: rgba(220, 80, 70, 0.12);
     --error-border: rgba(200, 60, 50, 0.35);
     --error-text: #a03028;
-<<<<<<< HEAD
-=======
     --icon-bg: rgba(200, 220, 238, 0.9);
 }
 
@@ -61,7 +60,6 @@ body.dark {
     --error-border: rgba(200, 60, 50, 0.5);
     --error-text: #e8a0a0;
     --icon-bg: rgba(255, 255, 255, 0.18);
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 }
 
 body {
@@ -77,11 +75,7 @@ body {
     overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-body,
-.background,
-.background::after,
-=======
+/* Dark mode toggle */
 .theme-toggle {
     position: fixed;
     top: 1rem;
@@ -112,6 +106,7 @@ body,
 body.dark .theme-icon.sun { display: none; }
 body.dark .theme-icon.moon { display: block; }
 
+/* Animação ao trocar de tema */
 .theme-transition-overlay {
     position: fixed;
     inset: 0;
@@ -127,11 +122,11 @@ body.dark .theme-icon.moon { display: block; }
     opacity: 0;
 }
 
+/* Transições suaves nos elementos ao mudar de tema */
 body,
 .background,
 .background::after,
 .theme-toggle,
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 .header h1,
 .search-form,
 .search-input,
@@ -179,6 +174,7 @@ body,
     align-items: stretch;
 }
 
+/* Header */
 .header {
     text-align: center;
     margin-bottom: 2rem;
@@ -191,6 +187,7 @@ body,
     letter-spacing: -0.02em;
 }
 
+/* Pesquisa */
 .search-section {
     margin-bottom: 1.5rem;
 }
@@ -247,6 +244,7 @@ body,
     color: var(--text-muted);
 }
 
+/* Loading */
 .loading {
     display: flex;
     align-items: center;
@@ -269,6 +267,7 @@ body,
     to { transform: rotate(360deg); }
 }
 
+/* Erro */
 .error-card {
     background: var(--error-bg);
     border: 1px solid var(--error-border);
@@ -283,6 +282,7 @@ body,
 .error-icon { font-size: 1.5rem; line-height: 1; }
 .error-card p { margin: 0; font-size: 0.95rem; }
 
+/* Cartão do tempo */
 .weather-card {
     background: var(--card-bg);
     border-radius: 1.5rem;
@@ -316,28 +316,19 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    background: #0d3b4c;;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 2px 12px rgba(13, 59, 76, 0.1);
-=======
     background: var(--icon-bg);
     border-radius: 50%;
     flex-shrink: 0;
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 }
 .weather-icon {
     width: 56px;
     height: 56px;
     object-fit: contain;
 }
-<<<<<<< HEAD
-=======
+/* Light mode: ícone na cor do texto Weatherly (#0d3b4c) */
 body:not(.dark) .weather-icon {
     filter: brightness(0) saturate(100%) invert(15%) sepia(45%) saturate(2500%) hue-rotate(168deg) brightness(92%) contrast(88%);
 }
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 
 .weather-main {
     padding: 1rem 0;
@@ -390,6 +381,7 @@ body:not(.dark) .weather-icon {
     color: var(--accent);
 }
 
+/* Footer */
 .footer {
     margin-top: 2rem;
     text-align: center;

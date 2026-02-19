@@ -1,0 +1,3 @@
+pt\weather\WeatherServer$WeatherApiHandler.class
+pt\weather\WeatherServer$StaticFileHandler.class
+pt\weather\WeatherServer.class

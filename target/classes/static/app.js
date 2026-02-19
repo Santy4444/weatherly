@@ -1,8 +1,6 @@
 (function () {
     'use strict';
 
-<<<<<<< HEAD
-=======
     const STORAGE_KEY = 'weatherly-theme';
 
     function initTheme() {
@@ -37,7 +35,6 @@
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
     initTheme();
 
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
     const form = document.getElementById('search-form');
     const cityInput = document.getElementById('city-input');
     const searchBtn = document.getElementById('search-btn');
@@ -87,11 +84,7 @@
         elements.country.textContent = data.sys && data.sys.country ? data.sys.country : '';
 
         const icon = w && w.icon ? w.icon : '01d';
-<<<<<<< HEAD
-        elements.weatherIcon.src = '/api/weather/icon?code=' + encodeURIComponent(icon);
-=======
         elements.weatherIcon.src = 'https://openweathermap.org/img/wn/' + icon + '@2x.png';
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
         elements.weatherIcon.alt = w ? w.description : '';
 
         const temp = m.temp != null ? Math.round(m.temp) : '—';
