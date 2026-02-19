@@ -6,13 +6,10 @@ Aplicação web para consultar o tempo em tempo real.
 ![Maven](https://img.shields.io/badge/Maven-3.x-C71A36?logo=apachemaven)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-<<<<<<< HEAD
 ### Preview
 
-![Preview da aplicação Weatherly](https://iili.io/q2izAwG.png)
+![Preview da aplicação Weatherly](https://iili.io/q2iAZBf.png)
 
-=======
->>>>>>> de1c97ecbec0df1ce0a36751c462a194e4a7c5fc
 ## Funcionalidades
 
 - Consulta o tempo atual por cidade (Lisboa, Porto, Londres, etc.)
